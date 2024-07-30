@@ -80,5 +80,74 @@ To run the test suite:
 
 python -m unittest discover tests
 
+#Unit Testing Parameters:
+
+UserManagement tests:
+
+create_user:
+
+name: 'Test User'
+email: 'test@example.com'
+mobile: '1234567890'
+password: 'password123'
+
+
+get_user:
+
+user_id: 1
+
+
+
+
+ExpenseManagement tests:
+
+create_batch:
+
+name: 'Test Batch'
+description: 'Test Description'
+user_ids: [1, 2, 3]
+
+
+
+
+
+#Integration Testing Parameters:
+
+User Creation:
+
+name: 'Test User'
+email: 'test@example.com'
+mobile: '1234567890'
+password: 'password123'
+
+
+Batch Creation:
+
+name: 'Test Batch'
+description: 'Test Description'
+user_ids: [user_id] (where user_id is obtained from the user creation response)
+
+
+Expense Addition:
+
+description: 'Test Expense'
+amount: 100
+split_method: 'equal'
+created_by: user_id (obtained from user creation)
+batch_id: batch_id (obtained from batch creation)
+splits: [] (empty list for equal split)
+
+
+Balance Sheet Retrieval:
+
+user_id: user_id (obtained from user creation)
+
+
+
+#Other important parameters:
+
+Database name: 'test_expenses.db' (used across all tests to create a separate test database)
+Flask app configuration: TESTING = True (used in integration tests to set up the Flask app for testing)
+
 
 
