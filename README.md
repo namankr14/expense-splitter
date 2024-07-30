@@ -16,14 +16,15 @@ Prerequisites:
 1. Clone the repository:
 
    git clone https://github.com/your-username/expense-splitting-app.git
+
    cd expense-splitting-app
 
-2. Create a virtual environment:
+3. Create a virtual environment:
 
    python -m venv venv
 
 
-3. Activate the virtual environment:
+4. Activate the virtual environment:
    - On Windows:
      
      venv\Scripts\activate
@@ -33,7 +34,7 @@ Prerequisites:
      source venv/bin/activate
      
 
-4. Install the required packages:
+5. Install the required packages:
    
    pip install -r requirements.txt
    
